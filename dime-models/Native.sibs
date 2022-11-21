@@ -1,0 +1,9 @@
+package app.demo
+
+sib IntegerList : info.scce.dime.app.demo.Native#getIntegerList
+->success
+result:[integer]
+
+sib PrintInteger : info.scce.dime.app.demo.Native#printInteger
+input:integer
+->success
