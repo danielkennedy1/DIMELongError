@@ -90,8 +90,8 @@ public final class ErrorProcess_2gSyEWl__HYPHEN_MINUS__Ee2DwNdDojdu8A implements
 		private ProcessCallFrame callStack = new ProcessCallFrame();
 
 		// direct dataflow variables.
-		private List<java.lang.Long> IntegerListSuccessResult_5m6kwWl__HYPHEN_MINUS__Ee2DwNdDojdu8A = new ArrayList<>();
-		private java.lang.Long IterateNextElement_A9__HYPHEN_MINUS__R4Wl_Ee2DwNdDojdu8A;
+		private List<java.lang.Integer> IntegerListSuccessResult_5m6kwWl__HYPHEN_MINUS__Ee2DwNdDojdu8A = new ArrayList<>();
+		private java.lang.Integer IterateNextElement_A9__HYPHEN_MINUS__R4Wl_Ee2DwNdDojdu8A;
 		// index variables of iterate sibs.
 		private int counterIterate_A9cGYWl_Ee2DwNdDojdu8A = 0;
 
@@ -229,10 +229,10 @@ public final class ErrorProcess_2gSyEWl__HYPHEN_MINUS__Ee2DwNdDojdu8A implements
 	// container for atomic SIB 'IntegerList'.
 	public SIB_ID execute_5l_XsWl__HYPHEN_MINUS__Ee2DwNdDojdu8A(final Context ctx) {
 		try {
-			final List<java.lang.Long> result = info.scce.dime.app.demo.Native.getIntegerList();
-			List<java.lang.Long> value1 = result;
+			final List<java.lang.Integer> result = info.scce.dime.app.demo.Native.getIntegerList();
+			List<java.lang.Integer> value1 = result;
 			if (value1 != null) { // prevent null in lists
-			ctx.IntegerListSuccessResult_5m6kwWl__HYPHEN_MINUS__Ee2DwNdDojdu8A = new ArrayList<java.lang.Long>(value1);
+			ctx.IntegerListSuccessResult_5m6kwWl__HYPHEN_MINUS__Ee2DwNdDojdu8A = new ArrayList<java.lang.Integer>(value1);
 			}
 		}
 		catch (Exception e) {
@@ -259,7 +259,7 @@ public final class ErrorProcess_2gSyEWl__HYPHEN_MINUS__Ee2DwNdDojdu8A implements
 	// container for iterate primitive SIB 'Iterate'.
 	public SIB_ID execute_A9cGYWl_Ee2DwNdDojdu8A(final Context ctx) {
 		final int pos = ctx.counterIterate_A9cGYWl_Ee2DwNdDojdu8A++;
-		List<java.lang.Long> list = ctx.IntegerListSuccessResult_5m6kwWl__HYPHEN_MINUS__Ee2DwNdDojdu8A;
+		List<java.lang.Integer> list = ctx.IntegerListSuccessResult_5m6kwWl__HYPHEN_MINUS__Ee2DwNdDojdu8A;
 		if(list != null && pos < list.size()) {
 			ctx.IterateNextElement_A9__HYPHEN_MINUS__R4Wl_Ee2DwNdDojdu8A = ctx.IntegerListSuccessResult_5m6kwWl__HYPHEN_MINUS__Ee2DwNdDojdu8A.get(pos);
 			// branch 'next'
