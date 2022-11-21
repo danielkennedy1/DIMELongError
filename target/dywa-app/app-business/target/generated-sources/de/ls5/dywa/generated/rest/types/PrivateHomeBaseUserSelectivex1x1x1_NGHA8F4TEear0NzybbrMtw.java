@@ -24,12 +24,12 @@ public class PrivateHomeBaseUserSelectivex1x1x1_NGHA8F4TEear0NzybbrMtw {
 		{
 			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser effectiveFrom = from;
 			final de.ls5.dywa.generated.rest.types.BaseUser effectiveTo = to;
-		effectiveTo.setfirstName(effectiveFrom.getfirstName());
+		effectiveTo.setlastName(effectiveFrom.getlastName());
 		}
 		{
 			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser effectiveFrom = from;
 			final de.ls5.dywa.generated.rest.types.BaseUser effectiveTo = to;
-		effectiveTo.setlastName(effectiveFrom.getlastName());
+		effectiveTo.setfirstName(effectiveFrom.getfirstName());
 		}
 	}
 }

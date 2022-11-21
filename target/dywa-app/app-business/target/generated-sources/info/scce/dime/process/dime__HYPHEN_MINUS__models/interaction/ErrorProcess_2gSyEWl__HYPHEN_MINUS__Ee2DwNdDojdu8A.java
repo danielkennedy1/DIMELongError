@@ -34,42 +34,6 @@ import com.fasterxml.jackson.annotation.JsonAutoDetect;
 
 public final class ErrorProcess_2gSyEWl__HYPHEN_MINUS__Ee2DwNdDojdu8A implements DIMEProcess {
 
-			// helper context for JSON serialization.
-			@JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY)
-			public static class JSONContext extends info.scce.dime.process.JSONContext {
-
-				// begin context variables
-				// end context variables
-
-				// begin direct dataflow variables
-				// end direct dataflow variables
-
-				// begin index variables of iterate sibs
-				private int counterIterate_A9cGYWl_Ee2DwNdDojdu8A = 0;
-				// endindex variables of iterate sibs
-
-				public static JSONContext toJSON(BeanManager bm, Context ctx) {
-					final JSONContext result = new JSONContext();
-					final info.scce.dime.rest.ObjectCache objectCache = new info.scce.dime.rest.ObjectCache();
-
-					result.counterIterate_A9cGYWl_Ee2DwNdDojdu8A = ctx.counterIterate_A9cGYWl_Ee2DwNdDojdu8A;
-
-					return result;
-				}
-
-				@Override
-		        public Context toContext(BeanManager bm, ProcessCallFrame callStack) {
-					final Context result = new Context();
-		            result.beanManager = bm;
-					result.callStack = callStack;
-
-
-
-					result.counterIterate_A9cGYWl_Ee2DwNdDojdu8A = this.counterIterate_A9cGYWl_Ee2DwNdDojdu8A;
-
-					return result;
-		        }
-			}
 
 	// attributes shaping the context variables.
 	public static class Context implements DIMEProcessContext {
@@ -91,20 +55,17 @@ public final class ErrorProcess_2gSyEWl__HYPHEN_MINUS__Ee2DwNdDojdu8A implements
 
 		// direct dataflow variables.
 		private List<java.lang.Long> IntegerListSuccessResult_5m6kwWl__HYPHEN_MINUS__Ee2DwNdDojdu8A = new ArrayList<>();
-		private java.lang.Long IterateNextElement_A9__HYPHEN_MINUS__R4Wl_Ee2DwNdDojdu8A;
-		// index variables of iterate sibs.
-		private int counterIterate_A9cGYWl_Ee2DwNdDojdu8A = 0;
 
 		public info.scce.dime.process.JSONContext toJSON() {
-			return JSONContext.toJSON(beanManager, this);
+			// this process has no context variables that need to be preserved
+			return null;
         }
 	}
 
 	private enum SIB_ID {
 	_2hCY8Wl__HYPHEN_MINUS__Ee2DwNdDojdu8A,
 	_5l_XsWl__HYPHEN_MINUS__Ee2DwNdDojdu8A,
-	__hbbYGl__HYPHEN_MINUS__Ee2DwNdDojdu8A,
-	_A9cGYWl_Ee2DwNdDojdu8A,
+	_Qi0VcGmjEe2JP4SKozLOIw,
 		;
 	}
 
@@ -135,7 +96,10 @@ public final class ErrorProcess_2gSyEWl__HYPHEN_MINUS__Ee2DwNdDojdu8A implements
 
 	@Override
 	public ErrorProcess_2gSyEWl__HYPHEN_MINUS__Ee2DwNdDojdu8AResult continueExecution(ProcessCallFrame callStack, info.scce.dime.process.JSONContext context, String sibId, Object slgResult) {
-		final Context ctx = ((JSONContext) context).toContext(this.beanManager, callStack);
+		assert context == null;
+		final Context ctx = new Context();
+		ctx.beanManager = this.beanManager;
+		ctx.callStack = callStack;
 
 		switch (sibId) {
 			default: throw new IllegalStateException("Unknown continuation point '" + sibId + '\'');
@@ -153,12 +117,8 @@ public final class ErrorProcess_2gSyEWl__HYPHEN_MINUS__Ee2DwNdDojdu8A implements
 					curr = execute_5l_XsWl__HYPHEN_MINUS__Ee2DwNdDojdu8A(ctx);
 					break;
 				}
-				case __hbbYGl__HYPHEN_MINUS__Ee2DwNdDojdu8A: {
-					curr = execute__hbbYGl__HYPHEN_MINUS__Ee2DwNdDojdu8A(ctx);
-					break;
-				}
-				case _A9cGYWl_Ee2DwNdDojdu8A: {
-					curr = execute_A9cGYWl_Ee2DwNdDojdu8A(ctx);
+				case _Qi0VcGmjEe2JP4SKozLOIw: {
+					curr = execute_Qi0VcGmjEe2JP4SKozLOIw(ctx);
 					break;
 				}
 				default: {
@@ -241,36 +201,20 @@ public final class ErrorProcess_2gSyEWl__HYPHEN_MINUS__Ee2DwNdDojdu8A implements
 			throw new IllegalStateException("SIB 'IntegerList' has no successor defined for branch 'failure'");
 		}
 		// branch 'success'
-		return SIB_ID._A9cGYWl_Ee2DwNdDojdu8A;
+		return SIB_ID._Qi0VcGmjEe2JP4SKozLOIw;
 	}
-	// container for atomic SIB 'PrintInteger'.
-	public SIB_ID execute__hbbYGl__HYPHEN_MINUS__Ee2DwNdDojdu8A(final Context ctx) {
+	// container for atomic SIB 'PrintIntegerList'.
+	public SIB_ID execute_Qi0VcGmjEe2JP4SKozLOIw(final Context ctx) {
 		try {
-			info.scce.dime.app.demo.Native.printInteger(ctx.IterateNextElement_A9__HYPHEN_MINUS__R4Wl_Ee2DwNdDojdu8A);
+			info.scce.dime.app.demo.Native.printIntegerList(ctx.IntegerListSuccessResult_5m6kwWl__HYPHEN_MINUS__Ee2DwNdDojdu8A);
 		}
 		catch (Exception e) {
 			e.printStackTrace();
 			// branch 'failure'
-			throw new IllegalStateException("SIB 'PrintInteger' has no successor defined for branch 'failure'");
+			throw new IllegalStateException("SIB 'PrintIntegerList' has no successor defined for branch 'failure'");
 		}
 		// branch 'success'
-		return SIB_ID._A9cGYWl_Ee2DwNdDojdu8A;
-	}
-	// container for iterate primitive SIB 'Iterate'.
-	public SIB_ID execute_A9cGYWl_Ee2DwNdDojdu8A(final Context ctx) {
-		final int pos = ctx.counterIterate_A9cGYWl_Ee2DwNdDojdu8A++;
-		List<java.lang.Long> list = ctx.IntegerListSuccessResult_5m6kwWl__HYPHEN_MINUS__Ee2DwNdDojdu8A;
-		if(list != null && pos < list.size()) {
-			ctx.IterateNextElement_A9__HYPHEN_MINUS__R4Wl_Ee2DwNdDojdu8A = ctx.IntegerListSuccessResult_5m6kwWl__HYPHEN_MINUS__Ee2DwNdDojdu8A.get(pos);
-			// branch 'next'
-			return SIB_ID.__hbbYGl__HYPHEN_MINUS__Ee2DwNdDojdu8A;
-		}
-		else {
-			ctx.counterIterate_A9cGYWl_Ee2DwNdDojdu8A = 0;
-			// branch 'exit'
-			return SIB_ID._2hCY8Wl__HYPHEN_MINUS__Ee2DwNdDojdu8A;
-		}
-		
+		return SIB_ID._2hCY8Wl__HYPHEN_MINUS__Ee2DwNdDojdu8A;
 	}
 	
 }  

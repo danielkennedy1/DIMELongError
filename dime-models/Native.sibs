@@ -7,3 +7,7 @@ result:[integer]
 sib PrintInteger : info.scce.dime.app.demo.Native#printInteger
 input:integer
 ->success
+
+sib PrintIntegerList : info.scce.dime.app.demo.Native#printIntegerList
+input : [integer]
+->success

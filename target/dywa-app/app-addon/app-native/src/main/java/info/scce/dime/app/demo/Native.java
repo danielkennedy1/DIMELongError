@@ -24,4 +24,8 @@ public class Native {
 	public static void printInteger(Integer input) {
 		System.out.println(input + "");
 	}
+	
+	public static void printIntegerList(List<Integer> input) {
+		System.out.println(input.toString());
+	}
 }

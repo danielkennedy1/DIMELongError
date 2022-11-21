@@ -117,9 +117,9 @@ public class BaseUserREST {
 			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser effectiveObj = obj;
 
 		// If values were not specified, ignore them
-		if (effectiveValue.isfirstNameSet()) {
+		if (effectiveValue.islastNameSet()) {
 			checkVersion(value, obj);
-			effectiveObj.setfirstName(effectiveValue.getfirstName());
+			effectiveObj.setlastName(effectiveValue.getlastName());
 		}
 	}
 		{
@@ -127,9 +127,9 @@ public class BaseUserREST {
 			final de.ls5.dywa.generated.entity.dime__HYPHEN_MINUS__models.app.BaseUser effectiveObj = obj;
 
 		// If values were not specified, ignore them
-		if (effectiveValue.islastNameSet()) {
+		if (effectiveValue.isfirstNameSet()) {
 			checkVersion(value, obj);
-			effectiveObj.setlastName(effectiveValue.getlastName());
+			effectiveObj.setfirstName(effectiveValue.getfirstName());
 		}
 	}
 	}
